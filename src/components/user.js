@@ -97,28 +97,12 @@ class User extends Component {
         this.props.dispatch(onDelete(key));
     }
 
-    logout() {
-        this.props.dispatch(onLogout());
-        // fire.auth().signOut()
-        // this.props.history.push('/login')
-    }
-
     render() {
         const { classes, post, loading } = this.props;
         const { newPost } = this.state;
         return(
             <React.Fragment>
                 <CssBaseline />
-                <AppBar position="fixed">
-                    <Toolbar>
-                        <Typography variant="h6" className={classes.title}>
-                            Posts
-                        </Typography>
-                        <Button size="small" color="secondary" className={classes.button} onClick={this.logout.bind(this)}>
-                            Log Out
-                        </Button>
-                    </Toolbar>
-                </AppBar>
                 {loading ? <div className={classes.progress}>
                         <LinearProgress color="secondary" />
                 </div>:

@@ -8,6 +8,7 @@ import fire from './config/firebase'
 import './App.css';
 import { withStyles } from '@material-ui/core/styles';
 import { appStyles } from './components/styles'
+import Appbar from "./components/appbar";
 import SignUp  from './components/signup'
 import Home  from './components/home'
 import Login  from './components/login'
@@ -21,6 +22,7 @@ class App extends Component {
       return (
           <AuthProvider>
               <Router>
+                  <Appbar/>
                   <Switch>
                       <Route exact path="/" component={Home} />
                       <Route exact path="/template" component={Template} />

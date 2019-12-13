@@ -29,14 +29,14 @@ class Home extends Component {
         return(
             <div className={classes.root}>
                 {/*app bar*/}
-                <AppBar position="relative">
-                    <Toolbar>
-                        <Typography variant="h6" className={classes.title}>
-                            Home
-                        </Typography>
-                        <NavLink className={classes.button} to="/sign_up">Sign up</NavLink>
-                    </Toolbar>
-                </AppBar>
+                {/*<AppBar position="relative">*/}
+                {/*    <Toolbar>*/}
+                {/*        <Typography variant="h6" className={classes.title}>*/}
+                {/*            Home*/}
+                {/*        </Typography>*/}
+                {/*        <NavLink className={classes.button} to="/sign_up">Sign up</NavLink>*/}
+                {/*    </Toolbar>*/}
+                {/*</AppBar>*/}
                 {/*card item*/}
                 <Container>
                     <Grid container justify="center" spacing={3}>

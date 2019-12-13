@@ -74,13 +74,13 @@ class Signup extends Component {
         return (
             <React.Fragment>
                 {/*App Bar*/}
-                <AppBar position="static" className={classes.appBar}>
-                    <Toolbar>
-                        <Typography variant="h6" className={classes.title}>
-                            Sign-Up
-                        </Typography>
-                    </Toolbar>
-                </AppBar>
+                {/*<AppBar position="static" className={classes.appBar}>*/}
+                {/*    <Toolbar>*/}
+                {/*        <Typography variant="h6" className={classes.title}>*/}
+                {/*            Sign-Up*/}
+                {/*        </Typography>*/}
+                {/*    </Toolbar>*/}
+                {/*</AppBar>*/}
                 <Container component="main" maxWidth="xs">
                     <CssBaseline />
                     <div className={classes.paper}>
