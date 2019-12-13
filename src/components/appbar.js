@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {onLogout} from "../Redux/actions/myactions";
+import { getUser, onLogout } from "../Redux/actions/myactions";
 import {connect} from "react-redux";
 import AppBar  from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -10,6 +10,9 @@ import withStyles from "@material-ui/core/styles/withStyles";
 
 
 class Appbar extends Component {
+    componentDidMount() {
+        this.props.dispatch(getUser());
+    }
 
     logout() {
         this.props.dispatch(onLogout());
@@ -18,12 +21,12 @@ class Appbar extends Component {
     }
 
     render() {
-        const {classes} = this.props
+        const {classes, user} = this.props
         return(
-            <AppBar position="fixed">
+            <AppBar position="relative">
                 <Toolbar>
                     <Typography variant="h6" className={classes.title}>
-                        Posts
+                        {user ? user : 'Posts'}
                     </Typography>
                     <Button size="small" color="secondary" className={classes.button} onClick={this.logout.bind(this)}>
                         Log Out
@@ -34,10 +37,9 @@ class Appbar extends Component {
     }
 }
 
-const mapStateToProps = ({post, loading}) => {
+const mapStateToProps = ({user}) => {
     return {
-        post: post,
-        loading: loading
+        user: user,
     }
 };
 

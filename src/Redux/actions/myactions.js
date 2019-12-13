@@ -1,6 +1,7 @@
 import axios from 'axios';
 import fire, {database} from "../../config/firebase";
 import firebase from 'firebase'
+import user from "../../components/user";
 
 // Firebase Actions----
 export const getData = () => dispatch => {
@@ -22,6 +23,21 @@ export const getData = () => dispatch => {
         }
     })
 };
+
+export const getUser = () => dispatch => {
+    firebase.auth().onAuthStateChanged(user => {
+        if(user){
+            const uid = user.uid
+            database.ref('/Users/' + uid).once('value')
+                .then((snapshot) => {
+                    dispatch({
+                        type: 'GET_USER',
+                        payload: snapshot.val().name
+                    })
+                })
+        }
+    })
+}
 
 export const onCreate = () => dispatch => {
 

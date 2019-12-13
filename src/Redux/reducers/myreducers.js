@@ -2,6 +2,7 @@ const user = {
     // data : null,
     loading: true,
     post: [],
+    user: '',
 };
 
 export default (state = user, action) => {
@@ -23,6 +24,11 @@ export default (state = user, action) => {
                 post: [action.payload, ...state.post, ],
                 loading: false,
             };
+        case 'GET_USER':
+            return {
+                ...state,
+                user: action.payload,
+            }
 
         case 'DELETE':
             return {

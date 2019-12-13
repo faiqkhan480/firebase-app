@@ -25,3 +25,4 @@ yarn-error.log*
 /yarn.lock
 /src/components/template.js
 /src/components/users.js
+src/config/privateroute.js

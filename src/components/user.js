@@ -47,19 +47,19 @@ class User extends Component {
 
         firebase.auth().onAuthStateChanged((user) => {
             console.log(user, 'usser=-=-=-=-=-=')
-            // if (user) {
-            //     // User is signed in.
-            //     const uid = user.uid;
-            //     console.log(newPost, 'user auth=-=-=--=')
-            //     database.ref('/Post/' + uid).push({post: newPost})
-            //         .then((ref) => {
-            //             if(ref){
-            //                 this.setState({newPost: ''});
-            //             }
-            //         })
-            // } else {
-            //     // No user is signed in.
-            // }
+            if (user) {
+                // User is signed in.
+                const uid = user.uid;
+                console.log(newPost, 'user auth=-=-=--=')
+                database.ref('/Post/' + uid).push({post: newPost})
+                    .then((ref) => {
+                        if(ref){
+                            this.setState({newPost: ''});
+                        }
+                    })
+            } else {
+                // No user is signed in.
+            }
         });
     }
 
