@@ -69,13 +69,6 @@ class Login extends Component {
                 {/*    <LinearProgress color="secondary" />*/}
                 {/*</div>:*/}
                 <>
-                    <AppBar position="static" className={classes.appBar}>
-                        <Toolbar>
-                            <Typography variant="h6" className={classes.title}>
-                                My App
-                            </Typography>
-                        </Toolbar>
-                    </AppBar>
                     <Container component="main" maxWidth="xs">
                         <CssBaseline />
                         <div className={classes.paper}>

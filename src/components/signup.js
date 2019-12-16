@@ -7,13 +7,10 @@ import { NavLink } from 'react-router-dom';
 import { signupStyles } from '../components/styles'
 import { withStyles } from '@material-ui/core/styles';
 import Typography from "@material-ui/core/Typography";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Container from '@material-ui/core/Container';
@@ -73,14 +70,6 @@ class Signup extends Component {
         const { name, phone, address, email, password } = this.state;
         return (
             <React.Fragment>
-                {/*App Bar*/}
-                <AppBar position="static" className={classes.appBar}>
-                    <Toolbar>
-                        <Typography variant="h6" className={classes.title}>
-                            Sign-Up
-                        </Typography>
-                    </Toolbar>
-                </AppBar>
                 <Container component="main" maxWidth="xs">
                     <CssBaseline />
                     <div className={classes.paper}>
@@ -99,7 +88,7 @@ class Signup extends Component {
                                         variant="outlined"
                                         required
                                         fullWidth
-                                        label="name"
+                                        label="Name"
                                         autoFocus
                                         onChange={this.handleChange.bind(this)}
                                     />
