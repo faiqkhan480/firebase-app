@@ -30,9 +30,6 @@ class Appbar extends Component {
                     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" className={classes.title}>
-                        Photos
-                    </Typography>
                     <IconButton
                         aria-label="account of current user"
                         aria-controls="menu-appbar"

@@ -3,6 +3,8 @@ export const appStyles = theme => ({
     '@global': {
         body: {
             backgroundColor: "white",
+            height: "100vh",
+            overflow: "hidden"
             // backgroundColor: "#8fe743",
         },
     },
@@ -17,6 +19,8 @@ export const appBar = theme => ({
     },
     toolBar: {
         color: "black",
+        display: "flex",
+        justifyContent: "space-between",
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -28,65 +32,26 @@ export const appBar = theme => ({
 
 // Home Component
 export const homeStyles = theme => ({
-    // paper: {
-    //     backgroundColor: 'white',
-    //     // backgroundImage: 'linear-gradient(147deg, #f71735 0%, #db3445 74%)',
-    //     marginTop: theme.spacing(8),
-    //     padding: theme.spacing(2),
-    //     display: 'flex',
-    //     flexDirection: 'column',
-    //     alignItems: 'center',
-    //     // borderRadius: 24,
-    //     // color: "white",
-    //     boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-    //
-    // },
-    // media: {
-    //     height: 170,
-    // },
-    // button: {
-    //     background: 'linear-gradient(315deg, #84fb95 0%, #cef576 74%)',
-    //     border: 'borderLeft',
-    //     borderRadius: 22,
-    //     color: 'white',
-    //     height: 40,
-    //     margin: theme.spacing(3, 2, 2),
-    //     padding: '0 30px',
-    // },
-    // link: {
-    //     textDecoration: 'none',
-    //     color: 'white'
-    // },
     root: {
-        flexGrow: 1,
-        // overflow: "hidden"
+        // backgroundColor: "#41e7e4",
+        height: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: 'center',
     },
-    menuButton: {
-        marginRight: theme.spacing(2),
-    },
-    title: {
-        flexGrow: 1,
+    container: {
+        // backgroundColor: "#e7335a",
+        // width: 600,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
     },
     button: {
-        color: 'white',
-        textDecoration: "none",
-        borderRadius: 25,
-    },
-    paper: {
-        height: 140,
-        width: 100,
-    },
-    girdChild: {
-        marginTop: theme.spacing(0),
-        // margin: theme.spacing(0),
-        // width: 0,
-    },
-    card: {
-        maxWidth: 345,
-    },
-    buttonGrid: {
-        marginTop: theme.spacing(2),
-    },
+        borderRadius: 26,
+        marginTop: theme.spacing(8),
+        background: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(62,62,66,1) 79%)",
+        color: "white",
+    }
 });
 
 // Sign-up Component
