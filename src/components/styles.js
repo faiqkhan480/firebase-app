@@ -10,17 +10,19 @@ export const appStyles = theme => ({
 
 // Appbar Component
 export const appBar = theme => ({
+    appBar: {
+        flexGrow: 1,
+        background: 'white',
+        boxShadow: 'none',
+    },
+    toolBar: {
+        color: "black",
+    },
+    menuButton: {
+        marginRight: theme.spacing(2),
+    },
     title: {
         flexGrow: 1,
-    },
-    button: {
-        // background: 'linear-gradient(315deg, #84fb95 0%, #cef576 74%)',
-        border: 'borderLeft',
-        borderRadius: 22,
-        color: 'white',
-        height: 40,
-        // margin: theme.spacing(3, 0, 2),
-        padding: '0 30px',
     },
 });
 

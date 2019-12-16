@@ -4,9 +4,11 @@ import {connect} from "react-redux";
 import AppBar  from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
+import MenuIcon from '@material-ui/icons/Menu';
 import { appBar } from "./styles";
 import withStyles from "@material-ui/core/styles/withStyles";
+import IconButton from "@material-ui/core/IconButton";
+import {AccountCircle} from "@material-ui/icons";
 
 
 class Appbar extends Component {
@@ -23,14 +25,22 @@ class Appbar extends Component {
     render() {
         const {classes, user} = this.props
         return(
-            <AppBar position="relative">
-                <Toolbar>
+            <AppBar position="relative" className={classes.appBar}>
+                <Toolbar className={classes.toolBar}>
+                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                        <MenuIcon />
+                    </IconButton>
                     <Typography variant="h6" className={classes.title}>
-                        {user ? user : 'Posts'}
+                        Photos
                     </Typography>
-                    <Button size="small" color="secondary" className={classes.button} onClick={this.logout.bind(this)}>
-                        Log Out
-                    </Button>
+                    <IconButton
+                        aria-label="account of current user"
+                        aria-controls="menu-appbar"
+                        aria-haspopup="true"
+                        color="inherit"
+                    >
+                        <AccountCircle />
+                    </IconButton>
                 </Toolbar>
             </AppBar>
         )
